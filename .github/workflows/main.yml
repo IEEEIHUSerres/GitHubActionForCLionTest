@@ -29,3 +29,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build project
         run: cmake --build cmake-build-debug --target all
+      
+      - name: Collect compiled file
+        uses: actions/upload-artifact@v2
+        with:
+          name: compiled-file
+          path: cmake-build-debug/GitHubActionForCLionTest
